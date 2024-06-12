@@ -24,7 +24,7 @@ const VideoContainer = () => {
   return (
     <div className="grid grid-cols-3 gap-10 mt-8">
       {videos.map((video) => (
-        <Link to={`/watch?v=${video.id}`} key={video.id}>
+        <Link to={`/watch?v=${video.id}`} key={video.id} state={{"info": video}}>
           <VideoCard info={video} />
         </Link>
       ))}
