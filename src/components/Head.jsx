@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { useEffect, useState } from "react";
-import { YOUTUBE_SEARCH_API } from "../utils/constants";
-import { cacheResults } from "../utils/searchSlice";
+// import { YOUTUBE_SEARCH_API } from "../utils/constants";
+// import { cacheResults } from "../utils/searchSlice";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,18 +28,18 @@ const Head = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [searchQuery]);
+  }, [searchQuery, searchCache]);
 
-  const getSearchSuggestions = async () => {
-    const stringifiedData = await fetch(YOUTUBE_SEARCH_API + searchQuery);
-    const data = await stringifiedData.json();
-    setSuggestions(data[1]);
-    dispatch(
-      cacheResults({
-        [searchQuery]: data[1],
-      })
-    );
-  };
+  // const getSearchSuggestions = async () => {
+  //   const stringifiedData = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+  //   const data = await stringifiedData.json();
+  //   setSuggestions(data[1]);
+  //   dispatch(
+  //     cacheResults({
+  //       [searchQuery]: data[1],
+  //     })
+  //   );
+  // };
   return (
     <div className="grid grid-flow-col fixed bg-white w-full p-4">
       <div className="flex col-span-2">
@@ -72,7 +72,7 @@ const Head = () => {
             <img
               src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png"
               alt="search"
-              className="h-6"
+              className="h-5 ml-1"
             />
           </button>
         </div>
