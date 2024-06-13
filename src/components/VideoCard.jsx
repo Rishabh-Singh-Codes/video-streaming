@@ -28,7 +28,7 @@ const VideoCard = ({ info }) => {
       <div className="grid grid-flow-col">
         <div className="col-span-11">
           <h3 className="font-bold text-lg">
-            {title.length > 80 ? `${title.slice(0, 80)}...` : title}
+            {title.length > 75 ? `${title.slice(0, 75)}...` : title}
           </h3>
           <h4 className="text-sm text-gray-700 font-medium">{channelTitle}</h4>
 

@@ -3,9 +3,11 @@ import Sidebar from "./Sidebar";
 
 const Body = () => {
   return (
-    <div className="flex pt-10 px-4">
+    <div className="pt-10 flex px-4 max-w-full">
       <Sidebar />
-      <Outlet />
+      <div className="flex-1 w-5/6">
+        <Outlet />
+      </div>
     </div>
   );
 };

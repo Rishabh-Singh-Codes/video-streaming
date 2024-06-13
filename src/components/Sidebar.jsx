@@ -5,11 +5,11 @@ const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
   if (!isMenuOpen) {
-    return <div></div>;
+    return <></>;
   }
 
   return (
-    <div className="">
+    <div className="mr-4">
       <ul className="border-b-2 mt-8 mb-4 pb-2">
         <li><Link to="/">Home</Link></li>
         <li>Shorts</li>

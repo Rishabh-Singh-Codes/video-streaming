@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { LIVE_CHAT_COUNT } from "./constants";
 
 const chatSlice = createSlice({
   name: "chat",
@@ -7,10 +8,14 @@ const chatSlice = createSlice({
   },
   reducers: {
     addMessage: (state, action) => {
-      state.messages.push(action.payload);
+      state.messages.splice(LIVE_CHAT_COUNT, 1);
+      state.messages.unshift(action.payload);
+    },
+    clearMessages: (state) => {
+      state.messages.length = 0;
     },
   },
 });
 
-export const { addMessage } = chatSlice.actions;
+export const { addMessage, clearMessages } = chatSlice.actions;
 export default chatSlice.reducer;

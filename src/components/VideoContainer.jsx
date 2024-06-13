@@ -3,7 +3,7 @@ import { YOUTUBE_VIDEOS_API } from "../utils/constants";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
 
-const VideoContainer = () => {
+const VideoContainer = ({location = "main"}) => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const VideoContainer = () => {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-10 mt-8">
+    <div className={`grid ${location === "main" ? "grid-cols-3" : "grid-cols-1"} gap-10 mt-8 w-full`}>
       {videos.map((video) => (
         <Link to={`/watch?v=${video.id}`} key={video.id} state={{"info": video}}>
           <VideoCard info={video} />

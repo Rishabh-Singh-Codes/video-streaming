@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useLocation } from "react-router-dom";
-import { YOUTUBE_VIDEO_DETAILS_API } from "../utils/constants";
 import CommentsContainer from "./CommentsContainer";
 import LiveChat from "./LiveChat";
+import VideoContainer from "./VideoContainer";
 
 const WatchPage = () => {
-  const [videoDetails, setVideoDetails] = useState({});
-
   const {
     state: { info },
   } = useLocation();
@@ -21,6 +19,7 @@ const WatchPage = () => {
 
   useEffect(() => {
     dispatch(closeMenu());
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
   }, [dispatch]);
 
   return (
@@ -29,6 +28,7 @@ const WatchPage = () => {
         <div className="h-[600px]">
           <iframe
             style={{ height: "100%", width: "100%", borderRadius: "20px" }}
+            title={localized.title}
             src={`https://www.youtube.com/embed/${info.id}`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -61,10 +61,9 @@ const WatchPage = () => {
           <CommentsContainer />
         </div>
       </div>
-      <div className="w-1/4 h-screen flex flex-col">
-        <div>
-          <LiveChat />
-        </div>
+      <div className="w-1/4 h-screen flex flex-col gap-4">
+        <LiveChat />
+        <VideoContainer location="watch" />
       </div>
     </div>
   );

@@ -29,23 +29,23 @@ export const comments = [
     ],
   },
   {
-    name: "Tom",
+    name: "Donald",
     comment: "How ?",
     replies: [
       {
-        name: "Dick",
+        name: "Tom",
         comment: "Like this",
         replies: [
           {
-            name: "Harry",
+            name: "Jerr",
             comment: "Not like this, like that",
             replies: [
               {
-                name: "Dick",
+                name: "Tom",
                 comment: "Not like that, like this",
                 replies: [
                   {
-                    name: "Harry",
+                    name: "Jerr",
                     comment: "Not like this, like that 2",
                   },
                 ],
@@ -57,30 +57,30 @@ export const comments = [
     ],
   },
   {
-    name: "Akshay Saini",
+    name: "Rishabh Singh",
     comment: "Lorem ipsum dolor sit amet, consectetur adip",
     replies: [
       {
-        name: "Akshay Saini",
+        name: "Rishabh Singh",
         comment: "Lorem ipsum dolor sit amet, consectetur adip",
         replies: [
           {
-            name: "Akshay Saini",
+            name: "Rishabh Singh",
             comment: "Lorem ipsum dolor sit amet, consectetur adip",
             replies: [
               {
-                name: "Akshay Saini",
+                name: "Rishabh Singh",
                 comment: "Lorem ipsum dolor sit amet, consectetur adip",
                 replies: [
                   {
-                    name: "Akshay Saini",
+                    name: "Rishabh Singh",
                     comment: "Lorem ipsum dolor sit amet, consectetur adip",
                     replies: [],
                   },
                 ],
               },
               {
-                name: "Akshay Saini",
+                name: "Rishabh Singh",
                 comment: "Lorem ipsum dolor sit amet, consectetur adip",
                 replies: [],
               },
@@ -92,75 +92,27 @@ export const comments = [
   },
 ];
 
-// export const comments = [
-//     {
-//       name: "Akshay Saini",
-//       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//       replies: [],
-//     },
-//     {
-//       name: "Akshay Saini",
-//       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//       replies: [
-//         {
-//           name: "Akshay Saini",
-//           text: "Lorem ipsum dolor sit amet, consectetur adip",
-//           replies: [],
-//         },
-//         {
-//           name: "Akshay Saini",
-//           text: "Lorem ipsum dolor sit amet, consectetur adip",
-//           replies: [
-//             {
-//               name: "Akshay Saini",
-//               text: "Lorem ipsum dolor sit amet, consectetur adip",
-//               replies: [
-//                 {
-//                   name: "Akshay Saini",
-//                   text: "Lorem ipsum dolor sit amet, consectetur adip",
-//                   replies: [
-//                     {
-//                       name: "Akshay Saini",
-//                       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//                       replies: [
-//                         {
-//                           name: "Akshay Saini",
-//                           text: "Lorem ipsum dolor sit amet, consectetur adip",
-//                           replies: [],
-//                         },
-//                       ],
-//                     },
-//                     {
-//                       name: "Akshay Saini",
-//                       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//                       replies: [],
-//                     },
-//                   ],
-//                 },
-//               ],
-//             },
-//           ],
-//         },
-//       ],
-//     },
-//     {
-//       name: "Akshay Saini",
-//       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//       replies: [],
-//     },
-//     {
-//       name: "Akshay Saini",
-//       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//       replies: [],
-//     },
-//     {
-//       name: "Akshay Saini",
-//       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//       replies: [],
-//     },
-//     {
-//       name: "Akshay Saini",
-//       text: "Lorem ipsum dolor sit amet, consectetur adip",
-//       replies: [],
-//     },
-//   ];
+export const list = [
+    "All",
+    "Computer",
+    "Software",
+    "Stock",
+    "Finance",
+    "Engineering",
+    "Computer",
+    "Software",
+    "Finance",
+    "Engineering",
+    "Finance",
+    "Engineering",
+    "Computer",
+    "Software",
+    "Finance",
+    "Engineering",
+    "Finance",
+    "Engineering",
+    "Computer",
+    "Software",
+    "Finance",
+    "Engineering",
+  ];

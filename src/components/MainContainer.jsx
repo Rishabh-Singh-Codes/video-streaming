@@ -2,12 +2,12 @@ import ButtonList from "./ButtonList";
 import VideoContainer from "./VideoContainer";
 
 const MainContainer = () => {
-    return (
-        <div className="pl-6">
-            <ButtonList />
-            <VideoContainer />
-        </div>
-    )
-}
+  return (
+    <div className="max-w-full flex flex-col pl-4">
+      <ButtonList />
+      <VideoContainer />
+    </div>
+  );
+};
 
 export default MainContainer;
